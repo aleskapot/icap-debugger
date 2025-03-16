@@ -1,0 +1,13 @@
+github.com/alexflint/go-arg v1.5.1 h1:nBuWUCpuRy0snAG+uIJ6N0UvYxpxA0/ghA/AaHxlT8Y=
+github.com/alexflint/go-arg v1.5.1/go.mod h1:A7vTJzvjoaSTypg4biM5uYNTkJ27SkNTArtYXnlqVO8=
+github.com/alexflint/go-scalar v1.2.0 h1:WR7JPKkeNpnYIOfHRa7ivM21aWAdHD0gEWHCx+WQBRw=
+github.com/alexflint/go-scalar v1.2.0/go.mod h1:LoFvNMqS1CPrMVltza4LvnGKhaSpc3oyLEBUZVhhS2o=
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/egirna/icap v0.0.0-20181108071049-d5ee18bd70bc/go.mod h1:FdVN2WHg7zOHhJ7kZQdDorfFhIfqZaHttjAzDDvAXHE=
+github.com/egirna/icap v0.3.2 h1:XuQyttngl7qdhb/dBrDDdFlwVi7uxiR4Tn1Bn+c7WZg=
+github.com/egirna/icap v0.3.2/go.mod h1:T2t2LrvnaXlEqdX+5iUM6S516uIP9TIexi9KRyM3RuM=
+github.com/egirna/icap-client v0.1.1 h1:UURZRA7+36bBmMgJZHB+W4d3hfp20pDUA/QL794C0ck=
+github.com/egirna/icap-client v0.1.1/go.mod h1:6yHhnak1cKRyhDoRxnzlRKJbOTXPgh9Oe3tOs7Sq3vw=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
