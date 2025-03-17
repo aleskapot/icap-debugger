@@ -83,7 +83,7 @@ func main() {
 	}
 
 	fmt.Println("ICAP Mode:", params.getMode())
-	fmt.Println("Response Status:", resp.Status)
+	fmt.Printf("Response Status: (%d) %s\n", resp.StatusCode, resp.Status)
 
 	// Вывод заголовков ответа
 	fmt.Println("Response Headers:")
