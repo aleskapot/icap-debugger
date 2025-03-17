@@ -7,10 +7,10 @@ import (
 )
 
 type arguments struct {
-	Url     string `arg:"positional" default:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"`
-	Mode    string `arg:"-m,--mode" help:"ICAP mode - REQMODE, RESPMOD or OPTIONS"`
+	IcapUrl string `arg:"positional" default:"icap://localhost:1344/kasperskiy"`
+	Mode    string `arg:"-m,--mode" help:"ICAP mode - REQUEST, RESPONSE or OPTIONS"`
+	Url     string `arg:"-d,--download" help:"Url to download for RESPMOD" default:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"`
 	Timeout int    `arg:"-t,--timeout" help:"Timeout in seconds" default:"5"`
-	IcapUrl string `arg:"--icap" help:"ICAP server URL" default:"icap://localhost:1344/kasperskiy"`
 	File    string `arg:"-f,--file" help:"File to upload" default:"./files-for-testing/sample.pdf"`
 }
 
