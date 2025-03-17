@@ -93,6 +93,7 @@ func main() {
 		}
 	}
 
+	// Разговорчивый режим
 	if params.Verbose {
 		httpResp := resp.ContentResponse
 
