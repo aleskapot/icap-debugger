@@ -93,35 +93,37 @@ func main() {
 		}
 	}
 
-	httpResp := resp.ContentResponse
+	if params.Verbose {
+		httpResp := resp.ContentResponse
 
-	// Проверка на nil
-	if httpResp == nil {
-		log.Fatal("httpResp is empty")
-	}
-
-	// Вывод статуса ответа
-	fmt.Println("Response status:", httpResp.Status)
-
-	// Вывод заголовков ответа
-	fmt.Println("Headers:")
-	for key, values := range httpResp.Header {
-		for _, value := range values {
-			fmt.Printf("%s: %s\n", key, value)
+		// Проверка на nil
+		if httpResp == nil {
+			log.Fatal("httpResp is empty")
 		}
-	}
 
-	// Чтение тела ответа
-	defer httpResp.Body.Close()
-	body, err := io.ReadAll(httpResp.Body)
-	if err != nil {
-		if err != io.EOF {
-			log.Println(err.Error())
-		} else {
-			log.Fatal(err)
+		// Вывод статуса ответа
+		fmt.Println("Response status:", httpResp.Status)
+
+		// Вывод заголовков ответа
+		fmt.Println("Headers:")
+		for key, values := range httpResp.Header {
+			for _, value := range values {
+				fmt.Printf("%s: %s\n", key, value)
+			}
 		}
+
+		// Чтение тела ответа
+		defer httpResp.Body.Close()
+		body, err := io.ReadAll(httpResp.Body)
+		if err != nil {
+			if err != io.EOF {
+				log.Println(err.Error())
+			} else {
+				log.Fatal(err)
+			}
+		}
+		fmt.Println("Body:", string(body))
 	}
-	fmt.Println("Body:", string(body))
 
 	fmt.Println("Execution finished!")
 }

@@ -12,6 +12,7 @@ type arguments struct {
 	Url     string `arg:"-d,--download" help:"Url to download for RESPMOD" default:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"`
 	Timeout int    `arg:"-t,--timeout" help:"Timeout in seconds" default:"5"`
 	File    string `arg:"-f,--file" help:"File to upload" default:"./files-for-testing/sample.pdf"`
+	Verbose bool   `arg:"-v,--verbose" help:"Verbose mode" default:"false"`
 }
 
 var args arguments
