@@ -1,0 +1,97 @@
+{
+  "uuid": "27743791-a236-44dd-b759-36373ff1a31b",
+  "lastMigration": 28,
+  "name": "Kasperskiy",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3004,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "662431fd-4fa7-4068-bc00-394b9c4c782f",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "lookup",
+      "responses": [
+        {
+          "uuid": "aa93b37d-5873-481e-9be8-3218085ad94a",
+          "body": "{\n  \"object\": \"memory\",\n  \"containOfficeMacro\": false,\n  \"scanResult\": \"CLEAN\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Clean file response",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "571f9e96-7fea-4170-af65-bc1998b7abc4",
+          "body": "{\n  \"object\": \"memory\",\n  \"containOfficeMacro\": false,\n  \"scanResult\": \"DETECT\"\n}",
+          "latency": 0,
+          "statusCode": 410,
+          "label": "Virus detected response",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": "SEQUENTIAL"
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "662431fd-4fa7-4068-bc00-394b9c4c782f"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
